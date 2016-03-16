@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/Evl_TopBorder"
+        android:background="@color/Evl_DailyCalenderBorderColor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Evl_DailyCalendarBorderWidth"/>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:weightSum="0.7"
+	    android:baselineAligned="false"
+	    android:orientation="horizontal" >
+	
+	    <View
+	        android:background="@color/Evl_DailyCalenderBorderColor"
+	        android:layout_width="@dimen/Evl_DailyCalendarBorderWidth"
+	        android:layout_height="match_parent"/>
+	
+		<jp.co.thcomp.view.DailyCalendarView
+		    android:id="@+id/Evl_Date01"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0.1" />
+	
+	    <View
+	        android:background="@color/Evl_DailyCalenderBorderColor"
+	        android:layout_width="@dimen/Evl_DailyCalendarBorderWidth"
+	        android:layout_height="match_parent"/>
+	
+		<jp.co.thcomp.view.DailyCalendarView
+		    android:id="@+id/Evl_Date02"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0.1" />
+	
+	    <View
+	        android:background="@color/Evl_DailyCalenderBorderColor"
+	        android:layout_width="@dimen/Evl_DailyCalendarBorderWidth"
+	        android:layout_height="match_parent"/>
+	
+		<jp.co.thcomp.view.DailyCalendarView
+		    android:id="@+id/Evl_Date03"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0.1" />
+	
+	    <View
+	        android:background="@color/Evl_DailyCalenderBorderColor"
+	        android:layout_width="@dimen/Evl_DailyCalendarBorderWidth"
+	        android:layout_height="match_parent"/>
+	
+		<jp.co.thcomp.view.DailyCalendarView
+		    android:id="@+id/Evl_Date04"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0.1" />
+	
+	    <View
+	        android:background="@color/Evl_DailyCalenderBorderColor"
+	        android:layout_width="@dimen/Evl_DailyCalendarBorderWidth"
+	        android:layout_height="match_parent"/>
+	
+		<jp.co.thcomp.view.DailyCalendarView
+		    android:id="@+id/Evl_Date05"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0.1" />
+	
+	    <View
+	        android:background="@color/Evl_DailyCalenderBorderColor"
+	        android:layout_width="@dimen/Evl_DailyCalendarBorderWidth"
+	        android:layout_height="match_parent"/>
+	
+		<jp.co.thcomp.view.DailyCalendarView
+		    android:id="@+id/Evl_Date06"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0.1" />
+	
+	    <View
+	        android:background="@color/Evl_DailyCalenderBorderColor"
+	        android:layout_width="@dimen/Evl_DailyCalendarBorderWidth"
+	        android:layout_height="match_parent"/>
+	
+		<jp.co.thcomp.view.DailyCalendarView
+		    android:id="@+id/Evl_Date07"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0.1" />
+	
+	    <View
+	        android:background="@color/Evl_DailyCalenderBorderColor"
+	        android:layout_width="@dimen/Evl_DailyCalendarBorderWidth"
+	        android:layout_height="match_parent"/>
+	
+	</LinearLayout>
+
+    <View
+        android:id="@+id/Evl_BottomBorder"
+        android:background="@color/Evl_DailyCalenderBorderColor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Evl_DailyCalendarBorderWidth"/>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="monthly canlendar: width=wrap_content, height=wrap_content"/>
+		<jp.co.thcomp.view.MonthlyCalendarView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<View
+			android:layout_width="1px"
+			android:layout_height="10dp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="monthly canlendar: width=100dp, height=wrap_content"/>
+		<jp.co.thcomp.view.MonthlyCalendarView
+			android:layout_width="100dp"
+			android:layout_height="wrap_content" />
+		<View
+			android:layout_width="1px"
+			android:layout_height="10dp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="weekly canlendar: width=wrap_content, height=wrap_content"/>
+		<jp.co.thcomp.view.WeeklyCalendarView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<View
+			android:layout_width="1px"
+			android:layout_height="10dp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="weekly canlendar: width=100dp, height=wrap_content"/>
+		<jp.co.thcomp.view.WeeklyCalendarView
+			android:layout_width="100dp"
+			android:layout_height="wrap_content" />
+		<View
+			android:layout_width="1px"
+			android:layout_height="10dp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="daily canlendar: width=wrap_content, height=wrap_content"/>
+		<jp.co.thcomp.view.DailyCalendarView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<View
+			android:layout_width="1px"
+			android:layout_height="10dp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="daily canlendar: width=50dp, height=wrap_content"/>
+		<jp.co.thcomp.view.DailyCalendarView
+			android:layout_width="50dp"
+			android:layout_height="50dp" />
+
+	</LinearLayout>
+</ScrollView>
+

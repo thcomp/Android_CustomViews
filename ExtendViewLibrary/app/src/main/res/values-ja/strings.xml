@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Evl_DayOfWeekStringArray">
+        <item >日</item>
+        <item >月</item>
+        <item >火</item>
+        <item >水</item>
+        <item >木</item>
+        <item >金</item>
+        <item >土</item>
+	</string-array>
+    <string-array name="Evl_MonthOfYearStringArray">
+        <item >１月</item>
+        <item >２月</item>
+        <item >３月</item>
+        <item >４月</item>
+        <item >５月</item>
+        <item >６月</item>
+        <item >７月</item>
+        <item >８月</item>
+        <item >９月</item>
+        <item >１０月</item>
+        <item >１１月</item>
+        <item >１２月</item>
+	</string-array>
+</resources>

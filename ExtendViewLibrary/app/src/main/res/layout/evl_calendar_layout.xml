@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+	    android:background="@drawable/evl_dailycalendar_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+	    <TextView
+	        android:id="@+id/Evl_MonthText"
+		    android:background="@drawable/evl_dailycalendar_border"
+	        android:gravity="center_horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	    
+	    <include
+	        android:id="@+id/Evl_MonthlyCalendarHeader"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        layout="@layout/evl_calendar_week" />
+	
+		<jp.co.thcomp.view.WeeklyCalendarView
+		    android:id="@+id/Evl_Week01"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" />
+		
+		<jp.co.thcomp.view.WeeklyCalendarView
+		    android:id="@+id/Evl_Week02"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" />
+		
+		<jp.co.thcomp.view.WeeklyCalendarView
+		    android:id="@+id/Evl_Week03"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" />
+		
+		<jp.co.thcomp.view.WeeklyCalendarView
+		    android:id="@+id/Evl_Week04"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" />
+		
+		<jp.co.thcomp.view.WeeklyCalendarView
+		    android:id="@+id/Evl_Week05"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    
+</LinearLayout>
