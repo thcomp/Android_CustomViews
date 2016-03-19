@@ -11,8 +11,6 @@ import jp.co.thcomp.example.R;
 import jp.co.thcomp.view.HorizontalSwipeView;
 
 public class TestHorizontalSwipeViewActivity extends Activity {
-	private static final String Passphrase = "0";
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -78,6 +76,6 @@ public class TestHorizontalSwipeViewActivity extends Activity {
 	};
 
 	private static class ItemData{
-		public HorizontalSwipeView.HiddenLayoutStatus status = HorizontalSwipeView.HiddenLayoutStatus.Clocse;
+		public HorizontalSwipeView.HiddenLayoutStatus status = HorizontalSwipeView.HiddenLayoutStatus.Close;
 	}
 }

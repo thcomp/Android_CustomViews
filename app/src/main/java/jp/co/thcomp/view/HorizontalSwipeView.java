@@ -19,7 +19,7 @@ public class HorizontalSwipeView extends FrameLayout{
 
     public static enum HiddenLayoutStatus {
         Open(10000),
-        Clocse(0);
+        Close(0);
 
         int pos;
         HiddenLayoutStatus(int toPos){
@@ -33,8 +33,9 @@ public class HorizontalSwipeView extends FrameLayout{
     private HorizontalScrollView mRootLayout;
     private FrameLayout mMainContentLayout;
     private FrameLayout mHiddenContentLayout;
-    private HiddenLayoutStatus mStatus= HiddenLayoutStatus.Clocse;
+    private HiddenLayoutStatus mStatus= HiddenLayoutStatus.Close;
     private long mDownTimeMS = 0;
+    private float mDownPositionX = 0f;
     private OnHiddenLayoutStatusChangeListener mHiddenLayoutStatusChangeListener;
 
     public HorizontalSwipeView(Context context) {
@@ -209,17 +210,15 @@ public class HorizontalSwipeView extends FrameLayout{
     }
 
     public void swipe(HiddenLayoutStatus nextStatus, boolean needAnimation){
-        if(!mStatus.equals(nextStatus)){
-            mStatus = nextStatus;
-            if(needAnimation) {
-                mRootLayout.smoothScrollTo(nextStatus.position(), 0);
-            }else{
-                mRootLayout.scrollTo(nextStatus.position(), 0);
-            }
+        mStatus = nextStatus;
+        if(needAnimation) {
+            mRootLayout.smoothScrollTo(nextStatus.position(), 0);
+        }else{
+            mRootLayout.scrollTo(nextStatus.position(), 0);
+        }
 
-            if(mHiddenLayoutStatusChangeListener != null){
-                mHiddenLayoutStatusChangeListener.onChangeHiddenLayoutStatus(this, nextStatus);
-            }
+        if(mHiddenLayoutStatusChangeListener != null){
+            mHiddenLayoutStatusChangeListener.onChangeHiddenLayoutStatus(this, nextStatus);
         }
     }
 
@@ -232,19 +231,27 @@ public class HorizontalSwipeView extends FrameLayout{
             switch(action){
                 case MotionEvent.ACTION_DOWN:
                     mDownTimeMS = System.currentTimeMillis();
+                    mDownPositionX = event.getX();
                     break;
                 case MotionEvent.ACTION_MOVE:
                     if(mDownTimeMS == 0){
                         mDownTimeMS = System.currentTimeMillis();
+                        mDownPositionX = event.getX();
                     }
                     break;
                 case MotionEvent.ACTION_UP:
                     if(System.currentTimeMillis() - mDownTimeMS > SwipeIntervalMS){
-                        // scroll
-                        if(mStatus.equals(HiddenLayoutStatus.Clocse)){
-                            swipe(HiddenLayoutStatus.Open, true);
+                        float currentPositionX = event.getX();
+                        if(currentPositionX - mDownPositionX > 0){
+                            // swipe from left to right(close)
+                            if(mStatus.equals(HiddenLayoutStatus.Open)){
+                                swipe(HiddenLayoutStatus.Close, true);
+                            }
                         }else{
-                            swipe(HiddenLayoutStatus.Clocse, true);
+                            // swipe from right to left(open)
+                            if(mStatus.equals(HiddenLayoutStatus.Close)){
+                                swipe(HiddenLayoutStatus.Open, true);
+                            }
                         }
                     }else{
                         // return to source position
