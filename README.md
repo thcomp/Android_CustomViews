@@ -4,4 +4,4 @@ It provides following custom view.
 * MonthlyCalendarView: view for monthly calendar
 * WeeklyCalendarView: view for weekly calendar
 * DailyCalendarView: view for daily calendar
-
+* HorizontalSwipeView: view container for swipe mene like iOS
