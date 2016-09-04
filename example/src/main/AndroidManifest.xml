@@ -17,6 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="jp.co.thcomp.testapi.TestFormattableTextViewActivity" android:label="@string/app_name" />
         <activity android:name="jp.co.thcomp.testapi.TestLockPatternViewActivity" android:label="@string/app_name" />
         <activity android:name="jp.co.thcomp.testapi.TestCalendarViewActivity" android:label="@string/app_name" />
         <activity android:name="jp.co.thcomp.testapi.TestHorizontalSwipeViewActivity" android:label="@string/app_name" />

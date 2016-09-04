@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		LinearLayout targetLayout = (LinearLayout)findViewById(R.id.llTriggerButtons);
+		addButton("test FormattableTextView", targetLayout, TestFormattableTextViewActivity.class);
 		addButton("test HorizontalSwipeView", targetLayout, TestHorizontalSwipeViewActivity.class);
 		addButton("test LockPatternView", targetLayout, TestLockPatternViewActivity.class);
 		addButton("test CalendarView", targetLayout, TestCalendarViewActivity.class);
